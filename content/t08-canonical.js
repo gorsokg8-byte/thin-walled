@@ -9,7 +9,7 @@ TW.addTopic({
   calcs: ['mnp', 'shell'],
   blocks: [
     { t: 'h', text: 'Вектор состояния' },
-    { t: 'f', id: 'cs-y', name: 'Вектор состояния', no: '8.1',
+    { t: 'f', id: 'cs-y', fig: ['sh-state'], name: 'Вектор состояния', no: '8.1',
       tex: R`\bar y = \{\rho,\ \eta,\ \vartheta,\ rN,\ rZ,\ rM_1\}^T,\qquad \frac{d\bar y}{ds} = [F]\bar y + \bar g`,
       src: ['lec7:21-23'],
       deriv: [

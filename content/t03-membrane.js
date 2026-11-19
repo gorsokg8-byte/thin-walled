@@ -11,7 +11,7 @@ TW.addTopic({
   blocks: [
     { t: 'h', text: 'Идея и уравнения' },
     { t: 'p', html: R`В <b>безмоментном состоянии</b> $M_1 = M_2 = Q = 0$. Тогда интегральное уравнение (2.18) и уравнение проекций на нормаль (2.15) содержат только $T_1$ и $T_2$ и решаются без деформаций.` },
-    { t: 'f', id: 'm-T1', name: 'Меридиональное усилие безмоментной теории', no: '3.1',
+    { t: 'f', id: 'm-T1', fig: ['sh-cut'], name: 'Меридиональное усилие безмоментной теории', no: '3.1',
       tex: R`T_1\BM = \frac{F(s)}{2\pi r\sin\theta}`,
       src: ['lec5:89-95', 'bid:133 (3.27)'], verified: 'Бидерман (3.27)',
       deriv: [
@@ -19,7 +19,7 @@ TW.addTopic({
         { html: R`Полагаем $Q = 0$ и делим на $2\pi r\sin\theta$.` },
         { html: R`Смысл: осевая равнодействующая внешних сил на отсечённой части уравновешивается осевыми проекциями меридиональных усилий по всей параллели.` },
       ] },
-    { t: 'f', id: 'm-laplace', name: 'Уравнение Лапласа', no: '3.2',
+    { t: 'f', id: 'm-laplace', fig: ['sh-laplace'], name: 'Уравнение Лапласа', no: '3.2',
       tex: R`\frac{T_1\BM}{R_1} + \frac{T_2\BM}{R_2} = q_n\quad\Rightarrow\quad T_2\BM = R_2\left(q_n - \frac{T_1\BM}{R_1}\right)`,
       src: ['lec5:89-95', 'bid:133 (3.27)'], verified: 'Бидерман (3.27)',
       deriv: [
@@ -77,7 +77,7 @@ $$\left|\frac{DR_2^2}{Eh}\frac{d^4q_n}{ds^4}\right| \ll |q_n|,\qquad \left|\frac
       [R`Конус, осевая сила $P$ (сжатие)`, R`$-\dfrac{P}{2\pi r\sin\theta}$`, R`$0$`, R`$\rho = \dfrac{\mu P}{2\pi Eh\sin\theta}$`],
       [R`Полусфера с жидкостью ($\theta$ от полюса)`, R`$\dfrac{\gamma R^2(1-\cos^3\theta)}{3\sin^2\theta}$`, R`$\gamma R^2\cos\theta - T_1$`, 'по (3.3)'],
     ] },
-    { t: 'f', id: 'm-cyl', name: 'Цилиндр с днищами под давлением', no: '3.7',
+    { t: 'f', id: 'm-cyl', fig: ['sh-cyl'], name: 'Цилиндр с днищами под давлением', no: '3.7',
       tex: R`T_1 = \frac{pR}{2},\qquad T_2 = pR,\qquad \rho\BM = \frac{pR^2}{2Eh}(2-\mu)`,
       src: ['lec5:89-95', 'bid:142'],
       deriv: [

@@ -10,7 +10,7 @@ TW.addTopic({
   blocks: [
     { t: 'h', text: 'Допущения и кинематика' },
     { t: 'p', html: R`Декартовы оси $x$, $y$ — в срединной плоскости, $z$ — по нормали, $-h/2\le z\le h/2$. Допущения: 1) прогиб мал по сравнению с толщиной; 2) точки срединной плоскости смещаются только по нормали к ней — деформаций в самой срединной плоскости нет ($u = v = 0$ при $z = 0$). Плюс <b>кинематическая гипотеза Кирхгофа</b>: материальный элемент, нормальный к срединной плоскости, остаётся прямым, нормальным к изогнутой срединной поверхности, и не меняет длины.` },
-    { t: 'f', id: 'pt-kin', name: 'Перемещения точек пластины', no: '12.1',
+    { t: 'f', id: 'pt-kin', fig: ['pl-kirch-x'], name: 'Перемещения точек пластины', no: '12.1',
       tex: R`\vartheta_x = \frac{\partial w}{\partial x},\quad \vartheta_y = \frac{\partial w}{\partial y};\qquad u^z = -z\frac{\partial w}{\partial x},\quad v^z = -z\frac{\partial w}{\partial y},\quad w^z = w(x, y)`,
       src: ['lec7:43 (13.1)', 'lec7:46 (13.3)', 'bid:52-53 (2.1)-(2.2)'], verified: 'Бидерман (2.1), (2.2)',
       deriv: [
@@ -36,7 +36,7 @@ TW.addTopic({
         { html: R`Напряжения: $\sigma_x = \frac{12M_x}{h^3}z$, наибольшие $\pm\frac{6M_x}{h^2}$.` },
       ] },
     { t: 'h', text: 'Равновесие и уравнение Софи Жермен' },
-    { t: 'f', id: 'pt-eq', name: 'Уравнения равновесия элемента dx·dy', no: '12.4',
+    { t: 'f', id: 'pt-eq', fig: ['pl-elem3d'], name: 'Уравнения равновесия элемента dx·dy', no: '12.4',
       tex: R`\frac{\partial Q_x}{\partial x} + \frac{\partial Q_y}{\partial y} + q = 0,\qquad \frac{\partial M_x}{\partial x} + \frac{\partial M_{yx}}{\partial y} - Q_x = 0,\qquad \frac{\partial M_y}{\partial y} + \frac{\partial M_{xy}}{\partial x} - Q_y = 0`,
       src: ['bid:56 (2.7)'], verified: 'Бидерман (2.7)',
       deriv: [
@@ -61,7 +61,7 @@ TW.addTopic({
       ['Шарнирное опирание', R`$w = 0$, $M_x = 0$ (на прямом крае это $\partial^2w/\partial x^2 = 0$)`],
       ['Свободный край', R`$M_x = 0$, $\tilde Q_x = Q_x + \dfrac{\partial M_{xy}}{\partial y} = 0$`],
     ] },
-    { t: 'f', id: 'pt-kirchhoff', name: 'Приведённая поперечная сила Кирхгофа', no: '12.7',
+    { t: 'f', id: 'pt-kirchhoff', fig: ['pl-kirchhoff'], name: 'Приведённая поперечная сила Кирхгофа', no: '12.7',
       tex: R`\tilde Q_x = Q_x + \frac{\partial M_{xy}}{\partial y} = -D\left[\frac{\partial^3w}{\partial x^3} + (2-\mu)\frac{\partial^3w}{\partial x\partial y^2}\right]`,
       src: ['bid:59-60 (2.12)'], verified: 'Бидерман (2.12)',
       deriv: [
@@ -70,7 +70,7 @@ TW.addTopic({
         { html: R`В углах прямоугольной пластины нескомпенсированные силы дают сосредоточенную угловую реакцию $2M_{xy}$ — углы шарнирно опёртой пластины под нагрузкой стремятся приподняться.` },
       ] },
     { t: 'h', text: 'Точное решение: прямоугольная пластина (Навье)' },
-    { t: 'f', id: 'pt-navier', name: 'Решение Навье для шарнирно опёртой пластины', no: '12.8',
+    { t: 'f', id: 'pt-navier', fig: ['pl-navier'], name: 'Решение Навье для шарнирно опёртой пластины', no: '12.8',
       tex: R`w = \frac{16q}{\pi^6D}\sum_{m,n = 1,3,5\ldots}\frac{\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b}}{mn\left(\frac{m^2}{a^2} + \frac{n^2}{b^2}\right)^2}`,
       where: R`Равномерная нагрузка $q$, стороны $a\times b$. Для квадратной пластины ($\mu = 0{,}3$): $w_{\max} = 0{,}00406\,qa^4/D$, $M_x = M_y = 0{,}0479\,qa^2$ в центре (Бидерман, с. 72).`,
       src: ['bid:68-72'],

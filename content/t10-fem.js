@@ -10,7 +10,7 @@ TW.addTopic({
   blocks: [
     { t: 'h', text: 'Геометрия и степени свободы' },
     { t: 'p', html: R`Элемент — усечённый конус длины $L$ с радиусами узловых окружностей $R_a$, $R_b$ и углом $\theta$ (предельные случаи: $\theta = 0$ — кольцевая пластина, $\theta = \pi/2$ — цилиндр). Безразмерная координата $\xi = s/L\in[0,1]$, $r(\xi) = R_a + \xi(R_b - R_a)$. В узле три степени свободы: $u_i$, $w_i$, $w_i' = dw/ds|_i = -\vartheta_i$.` },
-    { t: 'f', id: 'fe-shape', name: 'Функции формы', no: '10.1',
+    { t: 'f', id: 'fe-shape', fig: ['fe-hermite'], name: 'Функции формы', no: '10.1',
       tex: R`u = (1-\xi)u_1 + \xi u_2,\quad w = N_1w_1 + N_2w_1' + N_3w_2 + N_4w_2';\quad N_1 = 1 - 3\xi^2 + 2\xi^3,\ N_2 = L\xi(1-\xi)^2,\ N_3 = 3\xi^2 - 2\xi^3,\ N_4 = L\xi^2(\xi-1)`,
       src: ['lec7:38-39'],
       deriv: [
@@ -18,7 +18,7 @@ TW.addTopic({
         { html: R`Функции Эрмита: $N_1$ равна 1 в первом узле и 0 во втором, её производная нулевая в обоих; $N_2/L$ — наоборот, единичная производная в первом узле, и т. д. Проверка: $N_1(0) = 1$, $N_1(1) = 0$, $N_1'(0) = N_1'(1) = 0$.` },
         { html: R`Для $u$ достаточно линейной функции: в энергию входит только $u'$.` },
       ] },
-    { t: 'f', id: 'fe-B', name: 'Деформации конуса через узловые перемещения', no: '10.2',
+    { t: 'f', id: 'fe-B', fig: ['fe-cone'], name: 'Деформации конуса через узловые перемещения', no: '10.2',
       tex: R`\bar\varepsilon = \begin{Bmatrix}\varepsilon_1\\ \varepsilon_2\\ \varkappa_1\\ \varkappa_2\end{Bmatrix} = \begin{Bmatrix}du/ds\\ (u\cos\theta + w\sin\theta)/r\\ -d^2w/ds^2\\ -\frac{\cos\theta}{r}\frac{dw}{ds}\end{Bmatrix} = [B]\,\bar q,\qquad \bar q = \{u_1, w_1, w_1', u_2, w_2, w_2'\}^T`,
       src: ['lec7:39'],
       deriv: [
@@ -41,7 +41,7 @@ TW.addTopic({
         { html: R`Усилия через деформации: $\{T_1, T_2, M_1, M_2\} = [D]\bar\varepsilon$ (2.11).` },
         { html: R`$\delta W = \delta\bar q^T\left(2\pi L\int[B]^T[D][B]r\,d\xi\right)\bar q$. Интеграл считают квадратурой Гаусса: $\int_{-1}^1 f\,d\xi\approx\sum g_if(\xi_i)$ (в калькуляторе — трёхточечная на $[0,1]$).` },
       ] },
-    { t: 'f', id: 'fe-T', name: 'Переход к глобальным осям', no: '10.4',
+    { t: 'f', id: 'fe-T', fig: ['fe-cone'], name: 'Переход к глобальным осям', no: '10.4',
       tex: R`\begin{Bmatrix}u_i\\ w_i\\ w_i'\end{Bmatrix} = [\lambda]\begin{Bmatrix}\rho_i\\ \eta_i\\ \vartheta_i\end{Bmatrix},\quad [\lambda] = \begin{bmatrix}c & s & 0\\ s & -c & 0\\ 0 & 0 & -1\end{bmatrix};\qquad [K]_\text{гл} = [\Lambda]^T[K]^{(e)}[\Lambda],\ [\Lambda] = \begin{bmatrix}[\lambda]&0\\0&[\lambda]\end{bmatrix}`,
       src: ['lec7:40'],
       deriv: [

@@ -42,10 +42,13 @@
         else {
           if (s.html) li.append(el('div', { html: s.html }));
           if (s.tex) li.append(el('div', { html: TW.tex(s.tex, true) }));
+          if (s.fig) li.append(TW.figNode(s.fig));
           if (s.why) li.append(el('div', { class: 'why', html: s.why }));
         }
         ol.append(li);
       }
+      // figures for the whole derivation go first: the derivation starts from the drawing
+      if (b.fig) for (const id of [].concat(b.fig)) deriv.append(TW.figNode(id));
       deriv.append(ol);
       const btn = el('button', { class: 'btn small' }, 'Вывод ▸');
       btn.onclick = () => {
@@ -84,7 +87,8 @@
         for (const r of b.rows) t.append(el('tr', {}, r.map(c => el('td', { html: c }))));
         return el('div', { class: 'tbl-wrap' }, b.caption ? el('div', { class: 'small muted', html: b.caption }) : null, t);
       }
-      case 'fig': return el('figure', {},
+      case 'fig': if (b.id) return TW.figNode(b.id);
+        return el('figure', {},
         el('div', { html: typeof b.svg === 'function' ? b.svg() : b.svg }),
         b.caption ? el('figcaption', { html: b.caption }) : null);
       case 'plot': return b.make();

@@ -27,7 +27,7 @@ TW.addTopic({
   blocks: [
     { t: 'h', text: 'Уравнение для конуса' },
     { t: 'p', html: R`Для конуса $R_1 = \infty$, $\theta = \text{const}$; координата $s$ отсчитывается от вершины, $r = s\cos\theta$, $R_2 = r/\sin\theta = s\operatorname{ctg}\theta$, $\dfrac{\cos\theta}{r} = \dfrac1s$. Нагрузки по краям ($F = 0$, $q_n = q_1 = 0$).` },
-    { t: 'f', id: 'cn-eq', name: 'Комплексное уравнение для конуса', no: '7.1',
+    { t: 'f', id: 'cn-eq', fig: ['cn-geom'], name: 'Комплексное уравнение для конуса', no: '7.1',
       tex: R`\frac{d^2\sigma}{ds^2} + \frac1s\frac{d\sigma}{ds} - \frac{\sigma}{s^2} + ik\frac{\sigma}{s} = 0,\qquad k = \frac{\sqrt{12(1-\mu^2)}\operatorname{tg}\theta}{h}`,
       src: ['lec7:10 (4.1)', 'lec7:11 (5.3)'],
       deriv: [

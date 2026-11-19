@@ -68,7 +68,8 @@ self.addEventListener('fetch', e => {{
   }}).catch(() => caches.match(e.request, {{ ignoreSearch: true }})));
 }});
 """
-    (ROOT / 'sw.js').write_text(sw, encoding='utf-8')
+    # newline: keep LF on Windows too (the repository uses LF)
+    (ROOT / 'sw.js').write_text(sw, encoding='utf-8', newline='\n')
     return version
 
 

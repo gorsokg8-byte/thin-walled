@@ -228,3 +228,25 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 4px; }
 .search { width: 100%; padding: 8px 12px; font: inherit; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--text); }
 .toc { font-size: 14.5px; columns: 2; column-gap: 24px; margin: 8px 0 16px; padding-left: 20px; }
 @media (max-width: 700px) { .toc { columns: 1; } }
+
+/* figures drawn by js/figlib.js */
+.twf { max-width: 100%; height: auto; --fb: var(--bg); font-family: KaTeX_Main, "Times New Roman", serif; }
+.formula .twf { --fb: var(--panel); }
+.twfig { margin: 10px 0 14px; }
+.twf .nf { fill: none; }
+.twf .lb { paint-order: stroke; stroke: var(--fb); stroke-width: 4px; stroke-linejoin: round; }
+.twf .w { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
+.twf .b { font-weight: 600; }
+.twf .it { font-family: KaTeX_Math, "Times New Roman", serif; font-style: italic; }
+.twf .s-g { stroke: var(--text); } .twf .f-g { fill: var(--text); }
+.twf .s-m { stroke: var(--muted); } .twf .f-m { fill: var(--muted); }
+.twf .s-a { stroke: var(--accent); } .twf .f-a { fill: var(--accent); }
+.twf .s-f { stroke: var(--plot2); } .twf .f-f { fill: var(--plot2); }
+.twf .s-M { stroke: var(--diff); } .twf .f-M { fill: var(--diff); }
+.twf .s-q { stroke: var(--ok); } .twf .f-q { fill: var(--ok); }
+.twf .s-u { stroke: var(--accent); } .twf .f-u { fill: var(--accent); }
+.twf .s-r { stroke: var(--bad); } .twf .f-r { fill: var(--bad); }
+.twf .f-bg { fill: var(--fb); }
+.twf .fs-a { fill: var(--accent-soft); } .twf .fs-q { fill: var(--ok-soft); }
+.twf .fs-M { fill: var(--diff-soft); } .twf .fs-w { fill: var(--warn-soft); }
+.twf .fs-s { fill: color-mix(in srgb, var(--accent-soft) 65%, var(--accent) 35%); }

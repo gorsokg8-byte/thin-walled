@@ -11,7 +11,7 @@ TW.addTopic({
   blocks: [
     { t: 'h', text: 'Пластина как предельный случай оболочки' },
     { t: 'p', html: R`Для пластины $ds = dr$, $\theta = 0$, $\cos\theta = 1$, $\sin\theta = 0$, $1/R_1 = 1/R_2 = 0$. Прогиб $w = -\eta$, радиальное перемещение $u = \rho$. Тонкая пластина: $h/R < 0{,}2$ (Бидерман, с. 9). Задача распадается на две независимые: <b>растяжение</b> в плоскости ($u$, $T_1$, $T_2$ — задача Ламе, как для диска) и <b>изгиб</b> ($w$, $\vartheta$, $M_1$, $M_2$, $Q$).` },
-    { t: 'f', id: 'cp-kin', name: 'Кинематика и деформации изгиба', no: '11.1',
+    { t: 'f', id: 'cp-kin', fig: ['pl-kirch-r'], name: 'Кинематика и деформации изгиба', no: '11.1',
       tex: R`\frac{dw}{dr} = -\vartheta,\qquad \varepsilon_1 = \zeta\frac{d\vartheta}{dr},\qquad \varepsilon_2 = \zeta\frac{\vartheta}{r}`,
       src: ['lec5:96-97 (22.1)', 'bid:10-11 (1.3)-(1.4)'], verified: 'Бидерман (1.1), (1.3), (1.4)',
       deriv: [
@@ -26,7 +26,7 @@ TW.addTopic({
         { html: R`Это (2.11) оболочки при $\cos\theta = 1$: $\varkappa_1 = \vartheta'$, $\varkappa_2 = \vartheta\cos\theta/r = \vartheta/r$.` },
         { html: R`Или напрямую: $\sigma_1 = \frac{E}{1-\mu^2}(\varepsilon_1 + \mu\varepsilon_2)$, $M_1 = \int\sigma_1\zeta\,d\zeta = \frac{E}{1-\mu^2}\frac{h^3}{12}(\vartheta' + \mu\vartheta/r)$.` },
       ] },
-    { t: 'f', id: 'cp-Q', name: 'Поперечная сила из равновесия центральной части', no: '11.3',
+    { t: 'f', id: 'cp-Q', fig: ['pl-circ-core'], name: 'Поперечная сила из равновесия центральной части', no: '11.3',
       tex: R`Q = -\frac{F(r)}{2\pi r},\qquad F(r) = 2\pi\int_{r_0}^{r}q\,r\,dr + P_0`,
       where: R`$F(r)$ — равнодействующая нагрузки на часть пластины внутри радиуса $r$; $P_0 = 2\pi r_0 Q_0$ — сила на внутреннем контуре.`,
       src: ['lec5:96-97 (22.4)', 'bid:13-14 (1.12)-(1.13)'], verified: 'Бидерман (1.13)',
@@ -34,7 +34,7 @@ TW.addTopic({
         { html: R`Вырезаем центральную часть цилиндрическим сечением радиуса $r$ и проектируем силы на ось: поперечная сила на контуре $Q\cdot2\pi r$ уравновешивает нагрузку $F(r)$.` },
         { html: R`То же следует из уравнения $\dfrac{d(rQ)}{dr} + rq = 0$ (проекция на нормаль, (2.15) при $1/R_1 = 1/R_2 = 0$).` },
       ] },
-    { t: 'f', id: 'cp-eq', name: 'Уравнение изгиба круглой пластины', no: '11.4',
+    { t: 'f', id: 'cp-eq', fig: ['pl-circ-elem'], name: 'Уравнение изгиба круглой пластины', no: '11.4',
       tex: R`\frac{d}{dr}\left[\frac1r\frac{d(r\vartheta)}{dr}\right] = \frac{Q}{D} = -\frac{F(r)}{2\pi rD}`,
       src: ['lec5:96', 'bid:17 (1.18)'], verified: 'Бидерман (1.14), (1.18)',
       deriv: [

@@ -124,7 +124,7 @@ if len(sys.argv) > 1:
     src = p.read_text(encoding='utf-8')
     new, k = re.subn(r'const geomSvg = R`<svg.*?</svg>`;', lambda m: 'const geomSvg = R`' + svg + '`;', src, flags=re.S)
     assert k == 1
-    p.write_text(new, encoding='utf-8')
+    p.write_text(new, encoding='utf-8', newline='\n')
     print('patched', p)
 else:
     print(svg)
