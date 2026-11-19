@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f5f8b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Оболочки">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<title>Тонкостенные конструкции</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Меню">&#9776;</button>
+  <a class="brand" href="#/">Механика тонкостенных конструкций</a>
+  <span class="exam" id="examCountdown"></span>
+  <button class="theme-btn" id="themeBtn" title="Светлая/тёмная тема">&#9680;</button>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar"></nav>
+  <main class="content" id="view"></main>
+</div>
+
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/auto-render.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/plot.js"></script>
+<script src="js/solver.js"></script>
+<script src="js/fem-tree.js"></script>
+<!-- content -->
+<script src="content/course.js"></script>
+<script src="content/t01-basics.js"></script>
+<script src="content/t02-equations.js"></script>
+<script src="content/t03-membrane.js"></script>
+<script src="content/t04-edge-effect.js"></script>
+<script src="content/t05-junctions.js"></script>
+<script src="content/t06-meissner.js"></script>
+<script src="content/t07-cone.js"></script>
+<script src="content/t08-canonical.js"></script>
+<script src="content/t09-godunov.js"></script>
+<script src="content/t10-fem.js"></script>
+<script src="content/t11-circular-plates.js"></script>
+<script src="content/t12-plate-theory.js"></script>
+<script src="content/t13-dz6.js"></script>
+<script src="content/t14-exam.js"></script>
+<script src="content/t15-plate-classic.js"></script>
+<script src="content/t16-plate-fem.js"></script>
+<!-- calculators and problems -->
+<script src="js/calcs/membrane.js"></script>
+<script src="js/calcs/edge-effect.js"></script>
+<script src="js/calcs/junction.js"></script>
+<script src="js/calcs/functions.js"></script>
+<script src="js/calcs/shell-solver.js"></script>
+<script src="js/calcs/plates.js"></script>
+<script src="js/calcs/dz6.js"></script>
+<script src="js/calcs/plates2.js"></script>
+<script src="js/views.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
