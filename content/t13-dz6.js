@@ -1,22 +1,25 @@
 (function () {
 const R = String.raw;
 
-const schemeSvg = R`<svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif" font-size="14">
-<style>.s{stroke:var(--accent);fill:none;stroke-width:3}.p{fill:var(--plot2);opacity:.85}.w{stroke:var(--text);stroke-width:2}.t{fill:var(--text)}.l{fill:var(--accent-soft)}.d{stroke:var(--muted);stroke-dasharray:4 4}</style>
-<circle cx="200" cy="165" r="110" class="l"/>
-<path d="M200 55 A110 110 0 1 1 199.9 55" class="s"/>
-<rect x="190" y="38" width="20" height="18" fill="none" stroke="var(--accent)" stroke-width="3"/>
-<line class="d" x1="200" y1="20" x2="200" y2="310"/>
-<rect x="310" y="159" width="210" height="12" class="p"/>
-<rect x="88" y="159" width="2" height="12" class="p"/>
-<line class="w" x1="522" y1="120" x2="522" y2="210"/>
-<g class="w"><line x1="522" y1="125" x2="535" y2="112"/><line x1="522" y1="145" x2="535" y2="132"/><line x1="522" y1="165" x2="535" y2="152"/><line x1="522" y1="185" x2="535" y2="172"/><line x1="522" y1="205" x2="535" y2="192"/></g>
-<text class="t" x="210" y="160">R</text><line class="d" x1="200" y1="165" x2="310" y2="165"/>
-<text class="t" x="410" y="153">пластина 2h</text>
-<text class="t" x="310" y="240">r = R … 2R, заделка при r = 2R</text>
-<text class="t" x="215" y="48">горловина: уровень жидкости</text>
-<text class="t" x="120" y="300">жидкость, γ = ρg</text>
-<text class="t" x="320" y="105">h, μ = 0,3, R = 50h</text>
+const schemeSvg = R`<svg viewBox="0 0 540 330" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19">
+<style>.s{stroke:var(--accent);fill:none;stroke-width:3}.p{fill:var(--plot2)}.w{stroke:var(--text);stroke-width:2}.t{fill:var(--text)}.l{fill:var(--accent-soft)}.d{stroke:var(--muted);stroke-dasharray:5 4;stroke-width:1.2}.lb{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}</style>
+<circle cx="170" cy="180" r="110" class="l"/>
+<path d="M170 70 A110 110 0 1 1 169.9 70" class="s"/>
+<rect x="160" y="52" width="20" height="18" fill="none" stroke="var(--accent)" stroke-width="3"/>
+<line class="d" x1="170" y1="22" x2="170" y2="318"/>
+<rect x="280" y="174" width="215" height="12" class="p"/>
+<rect x="18" y="174" width="42" height="12" class="p"/>
+<path class="w" fill="none" d="M24 164 L14 172 L26 180 L14 188 L24 196"/>
+<line class="w" x1="497" y1="135" x2="497" y2="225"/>
+<g class="w"><line x1="497" y1="140" x2="510" y2="127"/><line x1="497" y1="160" x2="510" y2="147"/><line x1="497" y1="180" x2="510" y2="167"/><line x1="497" y1="200" x2="510" y2="187"/><line x1="497" y1="220" x2="510" y2="207"/></g>
+<line class="d" x1="170" y1="180" x2="280" y2="180"/><text class="t lb" x="225" y="170" text-anchor="middle" font-style="italic">R</text>
+<text class="t lb" x="388" y="163" text-anchor="middle">пластина, 2h</text>
+<text class="t lb" x="388" y="212" text-anchor="middle">r = R … 2R</text>
+<text class="t lb" x="528" y="252" text-anchor="end" font-size="17">заделка при r = 2R</text>
+<text class="t lb" x="190" y="46" font-size="17">горловина (уровень жидкости)</text>
+<text class="t" x="170" y="236" text-anchor="middle" font-size="17">жидкость</text>
+<text class="t" x="170" y="258" text-anchor="middle" font-size="17">γ = ρg</text>
+<text class="t lb" x="300" y="105" font-size="17">h, μ = 0,3, R = 50h</text>
 </svg>`;
 
 TW.addTopic({

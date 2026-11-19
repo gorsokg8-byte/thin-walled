@@ -1,23 +1,45 @@
 (function () {
 const R = String.raw;
 
-const geomSvg = R`<svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif" font-size="15">
-<style>.a{stroke:var(--text);fill:none;stroke-width:1.4}.m{stroke:var(--accent);fill:none;stroke-width:2.6}.d{stroke:var(--muted);stroke-dasharray:5 4;fill:none}.t{fill:var(--text)}.c{fill:var(--accent)}.r{stroke:var(--plot2);stroke-width:1.8;fill:none}</style>
-<line class="a" x1="120" y1="20" x2="120" y2="345"/><text class="t" x="128" y="36">z (ось вращения)</text>
-<path class="m" d="M120 60 C 230 62, 330 120, 360 220 S 370 320, 365 345"/>
-<text class="c" x="372" y="300">меридиан</text>
-<circle cx="330" cy="140" r="4.5" fill="var(--text)"/><text class="t" x="338" y="133">M</text>
-<line class="r" x1="330" y1="140" x2="120" y2="296"/>
-<text fill="var(--plot2)" x="205" y="236">R₂</text>
-<line class="r" x1="330" y1="140" x2="226" y2="217"/>
-<circle cx="226" cy="217" r="3.5" fill="var(--plot2)"/><text fill="var(--plot2)" x="232" y="212">O₁</text>
-<text fill="var(--plot2)" x="270" y="168">R₁</text>
-<circle cx="120" cy="296" r="3.5" fill="var(--plot2)"/><text fill="var(--plot2)" x="92" y="300">O₂</text>
-<line class="d" x1="120" y1="140" x2="330" y2="140"/><text class="t" x="215" y="132">r</text>
-<path class="a" d="M120 262 A 34 34 0 0 0 147 276"/><text class="t" x="128" y="258">θ</text>
-<line class="d" x1="330" y1="140" x2="395" y2="92"/><text class="t" x="398" y="90">n</text>
-<line class="d" x1="282" y1="76" x2="378" y2="204"/><text class="t" x="380" y="216">t₁ (касательная)</text>
-<text class="t" x="290" y="352" font-size="13">s — дуга меридиана от начальной параллели</text>
+const geomSvg = R`<svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17">
+<style>.a{stroke:var(--text);fill:none;stroke-width:1.4}.m{stroke:var(--accent);fill:none;stroke-width:3}.d{stroke:var(--muted);stroke-dasharray:6 4;fill:none;stroke-width:1.2}.t{fill:var(--text)}.c{fill:var(--accent)}.r{stroke:var(--plot2);stroke-width:2;fill:none}.o{fill:var(--plot2)}.dm{stroke:var(--plot2);stroke-width:1.2}.ext{stroke:var(--plot2);stroke-width:.8;opacity:.7}.ah{fill:var(--plot2)}.ang{stroke:var(--text);fill:none;stroke-width:1.3}.lb{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round;font-weight:600}</style>
+<line class="a" x1="62" y1="22" x2="62" y2="403"/>
+<path fill="var(--text)" d="M62 413L57.5 402L66.5 402Z"/>
+<text class="t lb" x="74" y="409">z<tspan font-weight="400" font-size="14"> — ось вращения</tspan></text>
+<path class="m" d="M62 45A255 160 0 0 1 317 205L317 395"/>
+<text class="c lb" x="327" y="325">меридиан</text>
+<circle cx="62" cy="45" r="3" fill="var(--accent)"/>
+<text class="c lb" x="169.4" y="43.2" text-anchor="middle" dominant-baseline="central" font-style="italic">s</text>
+<line class="d" x1="62" y1="108.7" x2="327.7" y2="108.7"/>
+<text class="t lb" x="163.8" y="98.7" text-anchor="middle" font-style="italic">r</text>
+<line class="d" x1="211.9" y1="63.9" x2="346.3" y2="175.9"/>
+<text class="t lb" x="351" y="193.7">t₁</text>
+<line class="d" x1="265.7" y1="108.7" x2="310.4" y2="54.9"/>
+<path fill="var(--muted)" d="M316.2 48L312.9 58.2L306.7 53.1Z"/>
+<text class="t lb" x="326" y="41.1" dominant-baseline="central">n</text>
+<line class="r" x1="265.7" y1="108.7" x2="62" y2="353.3"/>
+<line class="ext" x1="262.6" y1="106.2" x2="246.4" y2="92.7"/>
+<line class="ext" x1="137.7" y1="256.1" x2="121.5" y2="242.7"/>
+<line class="dm" x1="250.3" y1="95.9" x2="125.4" y2="245.9"/>
+<path class="ah" d="M250.3 95.9L247.3 105.1L241.8 100.5Z"/>
+<path class="ah" d="M125.4 245.9L128.4 236.7L133.9 241.3Z"/>
+<text class="o lb" x="176.3" y="161.3" text-anchor="middle" dominant-baseline="central">R₁</text>
+<line class="ext" x1="268.7" y1="111.3" x2="286.4" y2="126"/>
+<line class="ext" x1="65.1" y1="355.9" x2="82.7" y2="370.6"/>
+<line class="dm" x1="282.6" y1="122.8" x2="78.9" y2="367.4"/>
+<path class="ah" d="M282.6 122.8L279.6 132L274 127.4Z"/>
+<path class="ah" d="M78.9 367.4L81.9 358.1L87.4 362.8Z"/>
+<text class="o lb" x="192.3" y="254.7" text-anchor="middle" dominant-baseline="central">R₂</text>
+<circle cx="140.8" cy="258.7" r="4" fill="var(--plot2)"/>
+<text class="o lb" x="155.1" y="272.9" dominant-baseline="central">O₁</text>
+<circle cx="62" cy="353.3" r="4" fill="var(--plot2)"/>
+<text class="o lb" x="52" y="357.3" text-anchor="end" dominant-baseline="central">O₂</text>
+<path class="ang" d="M62 307.3A46 46 0 0 1 91.4 317.9"/>
+<text class="t lb" x="83.1" y="295" text-anchor="middle" dominant-baseline="central">θ</text>
+<path class="ang" d="M305.7 108.7A40 40 0 0 1 296.4 134.3"/>
+<text class="t lb" x="317.4" y="127.4" text-anchor="middle" dominant-baseline="central">θ</text>
+<circle cx="265.7" cy="108.7" r="5" fill="var(--panel)" stroke="var(--text)" stroke-width="2"/>
+<text class="t lb" x="243.7" y="96.7">M</text>
 </svg>`;
 
 TW.addTopic({
